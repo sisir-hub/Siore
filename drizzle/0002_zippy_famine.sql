@@ -1,0 +1,1 @@
+ALTER TABLE `order_items` ADD `sku` text DEFAULT '' NOT NULL;

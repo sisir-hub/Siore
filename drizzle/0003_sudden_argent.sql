@@ -1,0 +1,1 @@
+ALTER TABLE `couriers` ADD `provider` text DEFAULT 'manual' NOT NULL;
