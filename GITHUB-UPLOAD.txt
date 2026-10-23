@@ -1,0 +1,38 @@
+SIORE SOURCE — 22 October 2026
+
+Source commit: d56cacb0bb03793e98426b5d2e2e0a05948407f5
+Target repository: https://github.com/sisir-hub/Siore
+
+UPLOAD FROM GITHUB DESKTOP (recommended)
+1. Extract this ZIP.
+2. In GitHub Desktop, clone sisir-hub/Siore to your computer.
+3. Copy ALL files inside the extracted Siore-source folder into that clone.
+   Include .gitignore, .env.example, .npmrc and .openai.
+   Do not copy the outer Siore-source folder itself.
+4. Review changes, enter commit message "Import Siore ecommerce source",
+   click Commit to main, then Push origin.
+5. Check GitHub: package.json, app/, public/, db/ and drizzle/ should be at the repository root.
+
+WEB UPLOAD ALTERNATIVE
+Extract the ZIP first. In your repository choose Add file > Upload files.
+Upload the extracted files and folders, not this ZIP. GitHub's browser UI may
+limit file counts; use GitHub Desktop to preserve all nested and dot files.
+
+WHAT IS INCLUDED
+Storefront, admin/POS, API source, design assets, fonts with license,
+database schema and migrations, tests, lockfile and development scripts.
+The .env.example is a blank template, not live credentials.
+
+HOSTING AND DATA
+Uploading source to GitHub does not deploy or connect automatic sync.
+The current app uses Cloudflare Workers, D1 and R2 through Sites.
+GitHub Pages cannot run its backend. Independent hosting needs configuration
+and replacement/adaptation of the Sites-managed ChatGPT authentication.
+Never expose the Worker directly with trusted identity headers unprotected.
+Production database records, uploaded product images, credentials and
+COURIER_ENCRYPTION_KEY are NOT included. They require separate migration.
+Online payment, SMS and live courier API integrations are not connected.
+README.md contains development history; older initial sections may describe
+an earlier stage. Later implementation sections describe subsequent work.
+Keep secrets out of GitHub. This package has no node_modules, build output,
+local database, .git history or runtime state.
